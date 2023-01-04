@@ -9,7 +9,7 @@ class CsvFeeder extends Simulation{
   def getAUser()={
     repeat(7){
       feed(csvFeeder)
-      .exec(http("get a game by its name").get("/videogame/${gameID}")
+      .exec(http("get a game by its name").get("/videogame/${gameid}")
         .check(jsonPath("$.name").is("${name}"))
         .check(status.in(200,304)))
         .pause(2)
