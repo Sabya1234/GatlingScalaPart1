@@ -27,7 +27,7 @@ class BasicCustomFeeder extends Simulation {
     .exec(getSpecificGame())
 
   setUp(
-    scn.inject(rampUsers(5).during(5)).protocols(httpProtocol)
+    scn.inject(atOnceUsers(1)).protocols(httpProtocol)
   )
 
 }
